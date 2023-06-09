@@ -39,3 +39,32 @@ function playRound(playerSelection = "", computerSelection) {
     else 
         return "Invalid Input. Please only use: Rock, Paper, Scissors. NOT case-sensitive";
 }
+
+function game() {
+    let input;
+    let playerScore = 0;
+    let compScore = 0;
+    for (let i = 1; i <= 5; i++) {
+        input = prompt("Rock-Paper-Scissors! Pick your poison: ", "rock");
+        let temp = playRound(input);
+        switch(temp.charAt(0)) {
+            case 'L':
+                compScore++;
+                break;
+            case 'W':
+                playerScore++;
+                break;
+            default:
+                break;
+        }
+        console.log(temp);
+    }
+    if (playerScore > compScore) {
+        console.log("Player Wins!! with a score of " + playerScore);
+    }
+    else if (playerScore < compScore) {
+        console.log("Computer Wins!! with a score of " + compScore);
+    }
+    else 
+        console.log("Draw!!!!!");
+}
