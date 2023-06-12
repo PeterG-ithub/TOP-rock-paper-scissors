@@ -8,6 +8,9 @@
 body {
     background-color: #F9B872;
     background-image: url(./images/background.png);
+    font-size: 50px;
+    font-weight: 600;
+    color: #403224;
 }
 
 h1 {
@@ -49,6 +52,35 @@ img {
     color: #403224;
 }
 
+
+
+.cpu-choice {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.cpu-choice .text {
+    margin: 0;
+    align-self: center;
+}
+
+.game-outcome {
+    font-size: 50px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.cpu-pick {
+    height: 100px;
+    width: 100px;
+    border:#403224 5px solid;
+    padding: 10px;
+    background-color: #F2BF88;
+    border-radius: 25%;
+}
+
 .score-container {
     display: flex;
     justify-content: center;
@@ -56,18 +88,13 @@ img {
 }
 
 .scoreboard {
-    font-size: 40px;
+    font-size: 30px;
     width: 700px;
-    height: 500px;
+    height: 200px;
     border:#403224 5px solid;
-    padding: 10px;
+    padding: 5px;
     background-color: #F2BF88;
-    border-radius: 10%;
+    border-radius: 2%;
 }
 
-.game-outcome {
-    margin-top: 30px;
-    font-size: 70px;
-    font-weight: 700;
-}
 

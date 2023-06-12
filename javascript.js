@@ -1,4 +1,5 @@
 const gameOutcome = document.querySelector(".game-outcome")
+const cpuPick = document.querySelector(".cpu-pick")
 const btnRock = document.querySelector("#rock");
 const btnPaper = document.querySelector("#paper");
 const btnScissors = document.querySelector("#scissors");
@@ -11,12 +12,15 @@ btnScissors.addEventListener('click', () => playRound('scissors'));
 function getComputerChoice() {
     switch(randomIntegerGenerator(3)) {
     case 0:
+        cpuPick.src = "./images/rock.png"
         return "rock";
         break;
     case 1:
+        cpuPick.src = "./images/paper.png"
         return "paper";
         break;
     case 2:
+        cpuPick.src = "./images/scissor.png"
         return "scissors";
         break;
     default:
@@ -70,7 +74,7 @@ function update(outcome = "") {
         default:
             gameOutcome.textContent = "";
     }
-    
+
 }
 
 //~~~~~~~~~~~~Console Version~~~~~~~~~~~~//
