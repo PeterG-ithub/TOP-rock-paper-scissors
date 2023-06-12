@@ -77,7 +77,7 @@ function update(outcome = "") {
         default:
             gameOutcome.textContent = "";
     }
-    updateScore(outcome)
+    updateScore(outcome);
 }
 
 let scorePlayer = 0;
