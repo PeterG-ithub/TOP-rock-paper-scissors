@@ -38,3 +38,26 @@ img {
     font-weight: 600;
     color: #403224;
 }
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.scoreboard {
+    font-size: 40px;
+    width: 700px;
+    height: 500px;
+    border:#403224 5px solid;
+    padding: 10px;
+    background-color: #F2BF88;
+    border-radius: 10%;
+}
+
+.game-outcome {
+    margin-top: 30px;
+    font-size: 70px;
+    font-weight: 700;
+}
+
