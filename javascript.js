@@ -3,6 +3,9 @@ const cpuPick = document.querySelector(".cpu-pick")
 const btnRock = document.querySelector("#rock");
 const btnPaper = document.querySelector("#paper");
 const btnScissors = document.querySelector("#scissors");
+const playerScore = document.querySelector(".player-score");
+const cpuScore = document.querySelector(".cpu-score");
+
 
 btnRock.addEventListener('click', () => playRound('rock'));
 btnPaper.addEventListener('click', () => playRound('paper'));
@@ -74,7 +77,28 @@ function update(outcome = "") {
         default:
             gameOutcome.textContent = "";
     }
+    updateScore(outcome)
+}
 
+let scorePlayer = 0;
+let scoreCPU = 0;
+
+function updateScore(outcome = "") {
+    switch (outcome) {
+        case "draw":
+            break;
+        case "win":
+            scorePlayer++;
+            playerScore.textContent = `${scorePlayer}`;
+            break;
+        case "lose":
+            scoreCPU++;
+            cpuScore.textContent = `${scoreCPU}`;
+            break;
+        default:
+            playerScore.textContent = "0";
+            cpuScore.textContent = "0";
+    }
 }
 
 //~~~~~~~~~~~~Console Version~~~~~~~~~~~~//

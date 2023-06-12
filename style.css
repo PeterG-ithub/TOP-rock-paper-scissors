@@ -89,12 +89,28 @@ img {
 
 .scoreboard {
     font-size: 30px;
-    width: 700px;
-    height: 200px;
+    width: 500px;
+    height: auto;
     border:#403224 5px solid;
     padding: 5px;
     background-color: #F2BF88;
     border-radius: 2%;
+    padding-bottom: 20px;
 }
+
+.scoreboard .text {
+    font-size: 25px;
+}
+
+.score-container2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score-container2 div {
+    border:#403224 5px solid;
+    padding: 0px 10px;
+}
+
 
 
