@@ -1,11 +1,13 @@
-const gameOutcome = document.querySelector(".game-outcome")
+const roundOutcome = document.querySelector(".round-outcome")
 const cpuPick = document.querySelector(".cpu-pick")
 const btnRock = document.querySelector("#rock");
 const btnPaper = document.querySelector("#paper");
 const btnScissors = document.querySelector("#scissors");
 const playerScore = document.querySelector(".player-score");
 const cpuScore = document.querySelector(".cpu-score");
-
+const overlay = document.querySelector(".overlay")
+const gameOutcome = document.querySelector(".game-outcome")
+const playAgain = document.querySelector(".play-again")
 
 btnRock.addEventListener('click', () => playRound('rock'));
 btnPaper.addEventListener('click', () => playRound('paper'));
@@ -63,21 +65,22 @@ function playRound(playerSelection = "", computerSelection) {
 function update(outcome = "") {
     switch (outcome) {
         case "draw":
-            gameOutcome.textContent = "Draw!!";
-            gameOutcome.style.color = "yellow";
+            roundOutcome.textContent = "Draw!!";
+            roundOutcome.style.color = "yellow";
             break;
         case "win":
-            gameOutcome.textContent = "Win!";
-            gameOutcome.style.color = "green";
+            roundOutcome.textContent = "Win!";
+            roundOutcome.style.color = "green";
             break;
         case "lose":
-            gameOutcome.textContent = "Lose!";
-            gameOutcome.style.color = "red";
+            roundOutcome.textContent = "Lose!";
+            roundOutcome.style.color = "red";
             break;
         default:
-            gameOutcome.textContent = "";
+            roundOutcome.textContent = "";
     }
     updateScore(outcome);
+    isGameOver();
 }
 
 let scorePlayer = 0;
@@ -101,6 +104,25 @@ function updateScore(outcome = "") {
     }
 }
 
+function isGameOver() {
+    if (scoreCPU === 5 || scorePlayer === 5) {
+        overlay.style.display = "block";
+        if (scoreCPU > scorePlayer) {
+            gameOutcome.textContent = "You WIN!";
+        } else {
+            gameOutcome.textContent = "You LOSE!";
+        }
+    }
+}
+
+playAgain.addEventListener('click', restartGame);
+
+function restartGame() {
+    overlay.style.display = "none";
+    scoreCPU = 0;
+    scorePlayer = 0;
+    updateScore();
+}
 //~~~~~~~~~~~~Console Version~~~~~~~~~~~~//
 // function game() {
 //     let input;
