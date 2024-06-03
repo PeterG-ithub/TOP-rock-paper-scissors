@@ -13,3 +13,8 @@ In this project, I practiced:
 - Implementing interactive gameplay and logic using JavaScript.
   
 The game allows players to make their selection (rock, paper, or scissors) by clicking on the corresponding icons. The computer randomly chooses its move, and the game determines the winner based on the rules of Rock Paper Scissors. The outcome of each round is displayed, and the scores are updated accordingly. The game ends when either the player or the computer reaches a score of 5. Players can then choose to play again.
+
+## Screenshot
+
+### Main Page
+![Main page](images/home-page.png)
